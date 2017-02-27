@@ -14,7 +14,7 @@ public abstract class PropertyValidator<TProperty> {
         this.message = message;
     }
 
-    String getFormattedMessage(String propertyName, TProperty value) {
+    protected String getFormattedMessage(String propertyName, TProperty value) {
         return message.replace("{propertyName}", propertyName).replace("{value}", value != null ? value.toString() : "");
     }
 }

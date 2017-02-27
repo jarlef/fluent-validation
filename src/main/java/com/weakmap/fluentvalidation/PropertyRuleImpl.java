@@ -82,9 +82,15 @@ class PropertyRuleImpl<T, TProperty> implements PropertyRuleWithValidator<T, TPr
         List<ValidationError> errors = new ArrayList<>();
 
         for(PropertyValidator<TProperty> propertyValidator : propertyValidators) {
-            Boolean result = propertyValidator.validate(value);
+            Boolean isValid = propertyValidator.validate(value);
 
-            if(!result) {
+            if(isValid) {
+                continue;
+            }
+
+            if(propertyValidator instanceof ChildValidationValidator) {
+                return ((ChildValidationValidator<TProperty>) propertyValidator).getResult();
+            } else {
                 errors.add(new ValidationError(propertyName, propertyValidator.getFormattedMessage(propertyName, value)));
                 return ValidationResult.create(errors.toArray(new ValidationError[0]));
             }
