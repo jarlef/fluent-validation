@@ -1,11 +1,11 @@
-package com.weakmap.fluentvalidation;
+package com.github.jarlef.fluentvalidation;
 
-import com.weakmap.fluentvalidation.validators.ChildValidationValidator;
-import com.weakmap.fluentvalidation.validators.ExpressionValidator;
-import com.weakmap.fluentvalidation.validators.MaxLengthValidator;
-import com.weakmap.fluentvalidation.validators.MinLengthValidator;
-import com.weakmap.fluentvalidation.validators.NotEmptyValidator;
-import com.weakmap.fluentvalidation.validators.NotNullValidator;
+import com.github.jarlef.fluentvalidation.validators.ExpressionValidator;
+import com.github.jarlef.fluentvalidation.validators.MaxLengthValidator;
+import com.github.jarlef.fluentvalidation.validators.MinLengthValidator;
+import com.github.jarlef.fluentvalidation.validators.NotNullValidator;
+import com.github.jarlef.fluentvalidation.validators.ChildValidationValidator;
+import com.github.jarlef.fluentvalidation.validators.NotEmptyValidator;
 
 import java.util.ArrayList;
 import java.util.List;

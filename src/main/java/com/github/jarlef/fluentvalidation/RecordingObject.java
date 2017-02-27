@@ -1,4 +1,4 @@
-package com.weakmap.fluentvalidation;
+package com.github.jarlef.fluentvalidation;
 
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

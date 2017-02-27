@@ -1,4 +1,4 @@
-package com.weakmap.fluentvalidation;
+package com.github.jarlef.fluentvalidation;
 
 @SuppressWarnings("all")
 class Recorder<T> {

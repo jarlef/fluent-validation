@@ -1,8 +1,7 @@
-package com.weakmap.fluentvalidation.validators;
+package com.github.jarlef.fluentvalidation.validators;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 class DefaultValues {
     private static final Map<Class<?>,Object> defaultValues = new HashMap<>();

@@ -1,4 +1,4 @@
-package com.weakmap.fluentvalidation;
+package com.github.jarlef.fluentvalidation;
 
 import java.util.function.Function;
 

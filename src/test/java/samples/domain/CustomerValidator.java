@@ -1,6 +1,6 @@
 package samples.domain;
 
-import com.weakmap.fluentvalidation.AbstractValidator;
+import com.github.jarlef.fluentvalidation.AbstractValidator;
 
 @SuppressWarnings("all")
 public class CustomerValidator extends AbstractValidator<Customer> {

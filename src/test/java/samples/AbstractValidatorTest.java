@@ -1,6 +1,6 @@
 package samples;
 
-import com.weakmap.fluentvalidation.ValidationResult;
+import com.github.jarlef.fluentvalidation.ValidationResult;
 import org.junit.Before;
 import org.junit.Test;
 import samples.domain.Address;

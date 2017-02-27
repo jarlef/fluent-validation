@@ -1,6 +1,6 @@
-package com.weakmap.fluentvalidation.validators;
+package com.github.jarlef.fluentvalidation.validators;
 
-import com.weakmap.fluentvalidation.PropertyValidator;
+import com.github.jarlef.fluentvalidation.PropertyValidator;
 
 public class MaxLengthValidator<TProperty> extends PropertyValidator<TProperty> {
 

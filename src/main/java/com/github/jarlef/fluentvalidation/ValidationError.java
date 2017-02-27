@@ -1,4 +1,4 @@
-package com.weakmap.fluentvalidation;
+package com.github.jarlef.fluentvalidation;
 
 public class ValidationError {
     private final String propertyName;

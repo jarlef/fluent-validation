@@ -1,6 +1,6 @@
-package com.weakmap.fluentvalidation.validators;
+package com.github.jarlef.fluentvalidation.validators;
 
-import com.weakmap.fluentvalidation.PropertyValidator;
+import com.github.jarlef.fluentvalidation.PropertyValidator;
 
 import java.util.Collection;
 import java.util.Collections;

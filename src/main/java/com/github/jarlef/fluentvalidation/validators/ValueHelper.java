@@ -1,4 +1,4 @@
-package com.weakmap.fluentvalidation.validators;
+package com.github.jarlef.fluentvalidation.validators;
 
 import java.util.Collection;
 import java.util.Collections;

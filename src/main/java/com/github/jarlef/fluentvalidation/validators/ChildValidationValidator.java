@@ -1,8 +1,8 @@
-package com.weakmap.fluentvalidation.validators;
+package com.github.jarlef.fluentvalidation.validators;
 
-import com.weakmap.fluentvalidation.PropertyValidator;
-import com.weakmap.fluentvalidation.ValidationResult;
-import com.weakmap.fluentvalidation.Validator;
+import com.github.jarlef.fluentvalidation.PropertyValidator;
+import com.github.jarlef.fluentvalidation.Validator;
+import com.github.jarlef.fluentvalidation.ValidationResult;
 
 public class ChildValidationValidator<TProperty> extends PropertyValidator<TProperty> {
 

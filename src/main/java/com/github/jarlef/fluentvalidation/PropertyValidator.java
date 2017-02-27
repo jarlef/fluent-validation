@@ -1,4 +1,4 @@
-package com.weakmap.fluentvalidation;
+package com.github.jarlef.fluentvalidation;
 
 public abstract class PropertyValidator<TProperty> {
 
@@ -14,7 +14,7 @@ public abstract class PropertyValidator<TProperty> {
         this.message = message;
     }
 
-    protected String getFormattedMessage(String propertyName, TProperty value) {
+    String getFormattedMessage(String propertyName, TProperty value) {
         return message.replace("{propertyName}", propertyName).replace("{value}", value != null ? value.toString() : "");
     }
 }

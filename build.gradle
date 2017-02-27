@@ -1,13 +1,25 @@
-group 'com.weakmap'
+import org.gradle.api.artifacts.maven.MavenDeployment
+
+group 'com.github.jarlef'
+archivesBaseName = 'fluent-validation'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'signing'
 
 sourceCompatibility = 1.8
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+def isReleaseVersion = !(version ==~ /(?i).*SNAPSHOT$/)
+if (isReleaseVersion) {
+    project.ext['upload.url'] = project.ext['upload.release.url']
+} else {
+    project.ext['upload.url'] = project.ext['upload.snapshot.url']
 }
 
 dependencies {
