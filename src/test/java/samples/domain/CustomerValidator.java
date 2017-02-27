@@ -6,8 +6,9 @@ import com.weakmap.fluentvalidation.AbstractValidator;
 public class CustomerValidator extends AbstractValidator<Customer> {
 
     public CustomerValidator() {
-        ruleFor(Customer::getCustomerId).notEmpty().must(this::customerExists);
-        ruleFor(c -> c.getName()).notEmpty().must(name -> name.equals("John"));
+        ruleFor(Customer::getCustomerId, "customer id").notEmpty()
+                                                                    .must(this::customerExists).withMessage("Customer does not exist");
+        ruleFor(c -> c.getName(), "name").notEmpty().must(name -> name.equals("John")).withMessage("Hey {value}. You are not John");
         ruleFor(Customer::getAddress).notEmpty().using(new AddressValidator());
     }
 

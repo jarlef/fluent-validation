@@ -13,7 +13,11 @@ public class AbstractValidator<T> implements Validator<T> {
     }
 
     protected <TProperty> PropertyRule<T, TProperty> ruleFor(Function<T, TProperty> property) {
-        PropertyRuleImpl<T, TProperty> rule = new PropertyRuleImpl<>(property);
+        return this.ruleFor(property, null);
+    }
+
+    protected <TProperty> PropertyRule<T, TProperty> ruleFor(Function<T, TProperty> property, String propertyName) {
+        PropertyRuleImpl<T, TProperty> rule = new PropertyRuleImpl<>(property, propertyName);
         rules.add(rule);
         return rule;
     }

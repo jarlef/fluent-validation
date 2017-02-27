@@ -6,6 +6,11 @@ import java.util.Collections;
 class ValueHelper {
 
     static int getLength(Object value) {
+
+        if(value == null) {
+            return 0;
+        }
+
         if(value instanceof String) {
             String s = (String) value;
             return s.length();

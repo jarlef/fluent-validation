@@ -4,7 +4,7 @@ import com.weakmap.fluentvalidation.PropertyValidator;
 
 import java.util.function.Function;
 
-public class ExpressionValidator<TProperty> implements PropertyValidator<TProperty> {
+public class ExpressionValidator<TProperty> extends PropertyValidator<TProperty> {
 
     private final Function<TProperty, Boolean> expression;
 
@@ -12,7 +12,6 @@ public class ExpressionValidator<TProperty> implements PropertyValidator<TProper
         this.expression = expression;
     }
 
-    @Override
     public Boolean validate(TProperty value) {
         return expression.apply(value);
     }

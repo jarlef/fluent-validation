@@ -7,6 +7,7 @@ import samples.domain.Address;
 import samples.domain.Customer;
 import samples.domain.CustomerValidator;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -40,6 +41,8 @@ public class AbstractValidatorTest {
 
         assertFalse(result.isValid());
         assertTrue(result.getErrors().length == 1);
+        assertEquals("customer id", result.getErrors()[0].getPropertyName());
+        assertEquals("customer id cannot be empty", result.getErrors()[0].getMessage());
     }
 
     @Test
@@ -51,6 +54,9 @@ public class AbstractValidatorTest {
 
         assertFalse(result.isValid());
         assertTrue(result.getErrors().length == 1);
+
+        assertEquals("name", result.getErrors()[0].getPropertyName());
+        assertEquals("name cannot be empty", result.getErrors()[0].getMessage());
     }
 
     @Test
@@ -62,6 +68,8 @@ public class AbstractValidatorTest {
 
         assertFalse(result.isValid());
         assertTrue(result.getErrors().length == 1);
+        assertEquals("name", result.getErrors()[0].getPropertyName());
+        assertEquals("Hey Scott. You are not John", result.getErrors()[0].getMessage());
     }
 
 
@@ -74,6 +82,7 @@ public class AbstractValidatorTest {
 
         assertFalse(result.isValid());
         assertTrue(result.getErrors().length == 1);
+        assertEquals("getAddress", result.getErrors()[0].getPropertyName());
     }
 
 

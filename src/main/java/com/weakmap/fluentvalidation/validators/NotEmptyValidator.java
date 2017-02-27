@@ -5,7 +5,11 @@ import com.weakmap.fluentvalidation.PropertyValidator;
 import java.util.Collection;
 import java.util.Collections;
 
-public class NotEmptyValidator<TProperty> implements PropertyValidator<TProperty> {
+public class NotEmptyValidator<TProperty> extends PropertyValidator<TProperty> {
+
+    public NotEmptyValidator() {
+        super.setMessage("{propertyName} cannot be empty");
+    }
 
     @Override
     public Boolean validate(TProperty value) {

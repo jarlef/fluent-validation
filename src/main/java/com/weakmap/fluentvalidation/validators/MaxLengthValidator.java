@@ -2,7 +2,7 @@ package com.weakmap.fluentvalidation.validators;
 
 import com.weakmap.fluentvalidation.PropertyValidator;
 
-public class MaxLengthValidator<TProperty> implements PropertyValidator<TProperty> {
+public class MaxLengthValidator<TProperty> extends PropertyValidator<TProperty> {
 
     private final int maxLength;
 

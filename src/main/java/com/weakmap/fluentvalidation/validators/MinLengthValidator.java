@@ -2,7 +2,7 @@ package com.weakmap.fluentvalidation.validators;
 
 import com.weakmap.fluentvalidation.PropertyValidator;
 
-public class MinLengthValidator<TProperty> implements PropertyValidator<TProperty> {
+public class MinLengthValidator<TProperty> extends PropertyValidator<TProperty> {
 
     private int minLength;
 
